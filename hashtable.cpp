@@ -21,17 +21,12 @@ class hashTable {
 public:
 	hashTable(){
 		
-		if (_ifString == true) {
-			std::cout << "Its working" << std::endl;
-		}
-		else {
-			std::cout << "no" << std::endl;
-		}
+	std::cout << "Table Created" < <std::endl;
 	
 	}
 	inline T hashFunction(T index) {
-	
-			if constexpr (std::is_same_v<std::string, V>) {//Otherwise
+	                //Check to see if the Key is a String
+			if constexpr (std::is_same_v<std::string, V>) {
 
 				return (index % 10);
 			}
@@ -79,7 +74,7 @@ public:
 				if ((*it).key == findNum) {
 					if (!(*it).ll.empty()) {
 						for (const auto& listiterator : (*it).ll) {
-							std::cout << "it got to this function" << std::endl;
+							
 							std::cout << listiterator.value << std::endl;
 							
 						}
