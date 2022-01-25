@@ -114,8 +114,6 @@ private:
 };
 int main() {
 	hashTable <int, std::string> t;
-    
-	t.findValue(43);
 
 	return 0;
 }
